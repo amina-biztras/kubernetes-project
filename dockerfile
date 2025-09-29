@@ -14,6 +14,6 @@ RUN sh -c 'unzip -q "*.zip"'
 RUN cp -rvf templatemo_596_electric_xtra/* .
 RUN rm -rf templatemo_596_electric_xtra templatemo_596_electric_xtra.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-EXPOSE 80
+EXPOSE 80 22
 
  
