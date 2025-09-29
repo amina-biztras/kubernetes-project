@@ -1,6 +1,10 @@
 - hosts: all
   become: true
   tasks:
+    - name: delete old deployment
+      command: kubectl delete -f /home/ubuntu/deployment.yml
+      ignore_errors: yes
+
     - name: create new deployment
       command: kubectl apply -f /home/ubuntu/deployment.yml
 
